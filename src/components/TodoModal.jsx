@@ -100,7 +100,7 @@ function TodoModal({ type, modalOpen, setModalOpen, todo}) {
             <motion.div className='container' variants={dropIn} initial="hidden" animate="visible" exit="exit" >
                 <motion.div className='closeButton' onClick={() => setModalOpen(false)} onKeyDown={() => setModalOpen(false)} tabIndex={0} role="button" 
                 initial={{top: 40, opacity: 0}}
-                animate={{top: -10, opacity: 1}} 
+                animate={{top: 10, opacity: 1}} 
                 exit={{top:40, opacity: 0}}>
                     <MdOutlineClose />
                 </motion.div>
