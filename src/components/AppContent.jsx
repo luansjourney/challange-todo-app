@@ -47,7 +47,7 @@ function AppContent() {
         { filteredTodoList && filteredTodoList.length > 0 ? filteredTodoList.map( (todo) => 
           <TodoItem key={todo.id} todo={todo} />
         )  
-        : (<motion.p className='emptyText' variants={child}>No To Do found</motion.p>)}
+        : (<motion.p className='emptyText' variants={child}>Please add a Task.</motion.p>)}
       </AnimatePresence>
     </motion.div>
   )
