@@ -52,8 +52,8 @@ function CheckedButton( {checked, handleCheck }) {
                 strokeMiterlimit="10"
                 strokeWidth="6"
                 d="M1.5 22L16 36.5L51.5 1"
-                strokeLineJoin="round"
-                strokeLineCap="Round" />
+                strokeLinejoin="round"
+                strokeLinecap="Round" />
          </motion.svg>
     </motion.div>
   )

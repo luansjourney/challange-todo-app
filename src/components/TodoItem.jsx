@@ -3,8 +3,21 @@ import { useDispatch } from 'react-redux';
 import { MdDelete, MdEdit } from 'react-icons/md';
 import { deleteTodo, updateTodo } from '../slices/todoSlice';
 import {toast} from "react-hot-toast";
+import { motion } from "framer-motion";
 import TodoModal from './TodoModal';
 import CheckedButton from './CheckedButton';
+
+
+const child = {
+    hiddden: {
+      y:20, 
+      opacity: 0
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
 
 
 function TodoItem( { todo }) {
@@ -39,7 +52,7 @@ function TodoItem( { todo }) {
 
   return (
     <>
-        <div className='item'>
+        <motion.div className='item' variants={child}>
             <div className="todoDetails">
                 <CheckedButton checked={checked} handleCheck={handleCheck} />
                 <div className="texts">
@@ -57,7 +70,7 @@ function TodoItem( { todo }) {
                     <MdDelete />
                 </div>
             </div>
-        </div>
+        </motion.div>
         <TodoModal modalOpen={updateModalOpen} setModalOpen={setUpdateModalOpen} type="update" todo={todo}/>
     </>
   )

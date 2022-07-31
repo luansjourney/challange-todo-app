@@ -8,7 +8,7 @@ function Button({children, variant, type, ...rest}) {
   )
 }
 
-function SelectButton ({children}, ...rest) {
+function SelectButton ({children, ...rest}) {
 
   return( 
     <select className="button __select" {...rest} >{children}</select>
